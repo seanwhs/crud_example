@@ -1,0 +1,25 @@
+● employee_project
+|
++---● employee_register (app folder)
+|   |
+|   +--● migrations (includes files related to migrations)
+|   |  
+|   +--● templates
+|   |  |--● employee_register
+|   |  |  |--base.html
+|   |  |  |--employee_form.html
+|   |  |  |--employee_list.html
+|   | 
+|   |-- models.py
+|   |-- forms.py
+|   |-- urls.py
+|   |-- views.py
+|
++---● employee_project (project folder)
+|   |
+|   |--settings.py 
+|   |--urls.py
+
+# watch video to see how to use postgresl in project
+# https://www.youtube.com/watch?v=N6jzspc2kds
+# https://github.com/CodAffection/Django-CRUD-Operations

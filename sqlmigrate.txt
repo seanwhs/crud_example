@@ -1,0 +1,13 @@
+(.venv) PS D:\dev\crud-example> py manage.py sqlmigrate employee_register 0001
+
+BEGIN;
+--
+-- Create model Position
+--
+CREATE TABLE "employee_register_position" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "title" varchar(50) NOT NULL, "job_description" text NULL);
+--
+-- Create model Employee
+--
+CREATE TABLE "employee_register_employee" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "family_name" varchar(50) NOT NULL, "given_name" varchar(100) NOT NULL, "preferred_name" varchar(100) NULL, "emp_code" varchar(6) NOT NULL, "mobile_no" varchar(15) NOT NULL, "position_id" bigint NOT NULL REFERENCES "employee_register_position" ("id") DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX "employee_register_employee_position_id_c7c8c467" ON "employee_register_employee" ("position_id");
+COMMIT;
